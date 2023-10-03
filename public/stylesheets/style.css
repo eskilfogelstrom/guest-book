@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes background-1 {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+@keyframes background-2 {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 163px 163px;
+  }
+}
+
+body {
+  background: url('/images/bg.png');
+  padding: 1rem;
+  color: #fff;
+  animation: background-1 3s linear infinite;
+
+  font-family: 'Comic Neue', cursive;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 50rem;
+  margin-inline: auto;
+  padding: 2rem;
+  margin-top: clamp(2rem, 10vw, 8rem);
+
+}
+
+.site-title {
+  mix-blend-mode: color-dodge;
+  animation: background-2 5s linear infinite reverse;
+  background-size: 163px 163px;
+  color: #F0E100;
+  text-align: center;
+  font-family: 'Comic Neue', cursive;
+  font-weight: bold;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  padding: 3rem 1rem;
+  text-shadow: 5px 5px 0 rgb(0 0 0 / 1);
+  box-shadow: 5px 5px 0 rgb(0 0 0 / 0.5);
+}
+
+.post {
+  width: 100%;
+  max-width: 25rem;
+  padding: 1rem;
+
+  background: url('/images/bg-3.png');
+  margin-bottom: 2rem;
+  box-shadow: 5px 5px 0 rgb(0 0 0 / 0.5);
+  text-shadow: 2px 2px 0 rgb(0 0 0 / 0.5);
+  font-size: 1.25rem;
+}
+
+.post:nth-child(even) {
+  margin-left: auto;
+}
+
+.post__header {
+  border-bottom: 2px solid #E4D9FF;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.post__date {
+  color: rgb(255 255 255 / 0.75);
+}

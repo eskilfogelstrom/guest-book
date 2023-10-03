@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+        <link
+            href='https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=VT323&display=swap'
+            rel='stylesheet'
+        />
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <div class='wrapper'>
+            <h1 class='site-title'>FED25 Guest Book</h1>
+            <div class='posts'>
+                {{#each posts}}
+                    <article class='post'>
+                        <header class='post__header'>
+                            <div class='post__name'>{{this.name}}</div>
+                            <time class='post__date'>{{this.date}}</time>
+                        </header>
+                        <div class='post__content'>{{this.content}}</div>
+                    </article>
+                {{/each}}
+            </div>
+        </div>
+    </body>
+</html>
